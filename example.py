@@ -2,20 +2,28 @@ from qiskit import *
 from qiskit_aer import AerSimulator
 from qiskit.visualization import plot_histogram
 
-# Use Aer's AerSimulator
-simulator = AerSimulator()
+# Code starts here ----
 
 # Create a Quantum Register with 3 qubits
-qr = QuantumRegister(1, "q")
+qr = QuantumRegister(2, "q")
 
 # Create a Quantum Circuit acting on the q register
 circuit = QuantumCircuit(qr)
 
+# circuit.h(0)
+circuit.cx(0, 1)
 
-circuit.x(0)  # Add a NOT gate on the first qubit
+circuit.h(1)  # Add a NOT gate on the first qubit
+# circuit.y(0)
+# circuit.h(0)
+
+## Measure the qubits ----
 
 # Map the quantum measurement to the classical bits
 circuit.measure_all()
+
+# Use Aer's AerSimulator
+simulator = AerSimulator()
 
 # Compile the circuit for the support instruction set (basis_gates)
 # and topology (coupling_map) of the backend
@@ -29,6 +37,6 @@ result = job.result()
 
 # Returns counts
 counts = result.get_counts(compiled_circuit)
-print(f"\nThe odds for the qubit to be a 1 or a 0 is: {counts}")
+print(f"\nthe format is 'bits : probability' {counts}")
 
 print(circuit)
