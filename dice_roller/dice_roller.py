@@ -17,7 +17,7 @@ circuit.h(2)
 ## Measure the qubits ----
 
 # Map the quantum measurement to the classical bits
-def roll_dice():
+def get_num():
     circuit.measure_all()
 
     # Use Aer's AerSimulator
@@ -39,10 +39,16 @@ def roll_dice():
 
     # Extract the key using the keys() method
     key_list = list(result_dict.keys())
-
-    # If you only have one key, you can access it directly
     key = key_list[0]
+
     answer = int(key, 2)
     return answer
 
+def roll_dice():
+    num = get_num()
+    if num == 0 or num == 7:
+        num = get_num()
+    return num
+
+print("The results of rolling the dice is:")
 print(roll_dice())
