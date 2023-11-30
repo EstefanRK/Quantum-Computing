@@ -40,7 +40,6 @@ def get_num():
     # Extract the key using the keys() method
     key_list = list(result_dict.keys())
     key = key_list[0]
-
     answer = int(key, 2)
     return answer
 
