@@ -25,7 +25,7 @@ pip install qiskit ; pip install qiskit-aer ; pip install matplotlib ; pip insta
 
 ### Step 3 Running Scripts
 
-Open an Ubuntu terminal (WSL) and run scripts with python3. Example:
+Open an Ubuntu terminal (WSL) and run the example script by using the following command after navigating to the correct folder:
 
 ```
 python3 script.py
