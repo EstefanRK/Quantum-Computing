@@ -2,14 +2,14 @@
 
 ## Description
 
-This is a project about learning and exploring quantum programming
+This is a project about learning and exploring quantum programming.
 
 ## Table of Contents
 
-- [Installation](#installation)
+- [Setup](#setup)
 
 
-## Installation
+## Setup
 
 ### Step 1 - Install WSL 2
 
@@ -21,4 +21,12 @@ Open an Ubuntu terminal (WSL) and use the following command:
 
 ```
 pip install qiskit ; pip install qiskit-aer ; pip install matplotlib ; pip install pylatexenc
+```
+
+### Step 3 Running Scripts
+
+Open an Ubuntu terminal (WSL) and run scripts with python3. Example:
+
+```
+python3 script.py
 ```
