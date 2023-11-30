@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a project about learning and exploring quantum programming
+This is a project about learning and exploring quantum programming.
 
 ## Table of Contents
 
