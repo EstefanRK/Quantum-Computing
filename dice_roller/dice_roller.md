@@ -28,7 +28,7 @@ To introduce randomness into the number generation process, a Hadamard gate is a
 
 - 111
 - 110
-- 000
+- 001
 - 101
 
 Once the binary number is obtained, it is translated and displayed in the terminal.
