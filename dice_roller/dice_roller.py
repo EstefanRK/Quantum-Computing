@@ -41,6 +41,7 @@ def get_num():
     key_list = list(result_dict.keys())
     key = key_list[0]
     answer = int(key, 2)
+    #print(circuit)
     return answer
 
 def roll_dice():

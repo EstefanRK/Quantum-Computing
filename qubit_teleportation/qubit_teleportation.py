@@ -12,11 +12,7 @@ circuit = QuantumCircuit(qr)
 
 # circuit.h(0)
 circuit.h(0)
-circuit.cx(0, 1)
-circuit.x(0)
-
-# circuit.y(0)
-# circuit.h(0)
+circuit.h(1)
 
 ## Measure the qubits ----
 
