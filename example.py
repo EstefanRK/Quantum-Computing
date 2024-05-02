@@ -1,6 +1,5 @@
 from qiskit import *
 from qiskit_aer import AerSimulator
-from qiskit.visualization import plot_histogram
 
 # Code starts here ----
 
