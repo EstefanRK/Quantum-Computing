@@ -1,6 +1,5 @@
 from qiskit import *
 from qiskit_aer import AerSimulator
-from qiskit.visualization import plot_histogram
 
 # Code starts here ----
 
@@ -15,6 +14,7 @@ circuit.h(1)
 circuit.h(2)
 
 ## Measure the qubits ----
+
 
 # Map the quantum measurement to the classical bits
 def get_num():
@@ -41,13 +41,16 @@ def get_num():
     key_list = list(result_dict.keys())
     key = key_list[0]
     answer = int(key, 2)
+    # print(circuit)
     return answer
+
 
 def roll_dice():
     num = get_num()
     if num == 0 or num == 7:
         num = get_num()
     return num
+
 
 print("The results of rolling the dice is:")
 print(roll_dice())
