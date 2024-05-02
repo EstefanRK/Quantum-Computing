@@ -1,6 +1,5 @@
 from qiskit import *
 from qiskit_aer import AerSimulator
-from qiskit.visualization import plot_histogram
 
 # Code starts here ----
 
@@ -11,8 +10,8 @@ qr = QuantumRegister(2, "q")
 circuit = QuantumCircuit(qr)
 
 # circuit.h(0)
-circuit.h(0)
-circuit.h(1)
+circuit.x(0)
+circuit.x(1)
 
 ## Measure the qubits ----
 
@@ -27,7 +26,7 @@ simulator = AerSimulator()
 compiled_circuit = transpile(circuit, simulator)
 
 # Execute the circuit on the aer simulator
-job = simulator.run(compiled_circuit, shots=100)
+job = simulator.run(compiled_circuit, shots=10000)
 
 # Grab results from the job
 result = job.result()
